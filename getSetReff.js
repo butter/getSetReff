@@ -54,7 +54,7 @@ function getSetReff()
         sessionReferrer += "r:["+document.referrer.split('//')[1].split('/')[0]+"]";
     }
 
-    Object.keys(UTM_PARAM_LABEL_MAP).map(function(key) {
+    Object.keys(UTM_PARAM_LABEL_MAP).forEach(function(key) {
         var utmParam = getQueryParam(key);
         if (utmParam) {
             sessionReferrer += UTM_PARAM_LABEL_MAP[key]+":["+utmParam+"]";
